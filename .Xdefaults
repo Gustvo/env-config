@@ -1,0 +1,12 @@
+urxvt.foreground: white
+urxvt.background: black
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
+urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13:weight=bold
+urxvt.perl-ext-common: default,matcher,font-size
+urxvt.url-launcher: /usr/bin/firefox
+urxvt.matcher.button: C1
+urxvt.keysym.Control-0x2b: perl:font-size:increase
+urxvt.keysym.Control-0x2d: perl:font-size:decrease
+urxvt.scrollBar_right: true
+urxvt.scrollBar: false
+urxvt.visualBell: false
