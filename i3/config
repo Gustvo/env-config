@@ -180,7 +180,10 @@ bar {
 	strip_workspace_numbers yes
 }
 
-# Custom configs
+######################
+# 
+#   Custom configs
+#####################
 exec "setxkbmap -layout br"
 focus_follows_mouse no
 focus_wrapping no
@@ -197,10 +200,10 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 1%+
 bindsym XF86AudioMute exec amixer set Master toggle
 
 # Change current tracks
-bindsym XF86AudioNext fullscreen toggle
-bindsym XF86AudioPrev fullscreen toggle
-bindsym XF86AudioPlay fullscreen toggle
-bindsym Print fullscreen toggle
+#bindsym XF86AudioNext fullscreen toggle
+#bindsym XF86AudioPrev fullscreen toggle
+#bindsym XF86AudioPlay fullscreen toggle
+#bindsym Print fullscreen toggle
 
 # Mouse hotkeys
 bindsym --whole-window $mod+button3 floating toggle
@@ -214,16 +217,18 @@ exec compton
 # Start notification handler
 exec dunst
 
+# Move workspace to adjacent monitor
+bindsym $mod+m move worspace to output right
+bindsym $mod+Shift+m move workspace to output left
+
 # Necessary for i3-gaps
 hide_edge_borders both
 for_window [class="^.*"] border none
 
 # gaps config
-
 bindsym $mod+i gaps inner current plus 5 
 bindsym $mod+Shift+i gaps inner current minus 5 
 bindsym $mod+Shift+p gaps inner all set 8
-
 gaps inner 8
 gaps outer 4
 #smart_gaps on
