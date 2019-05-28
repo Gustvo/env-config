@@ -215,7 +215,7 @@ bindsym --whole-window $mod+button3 floating toggle
 exec ~/.fehbg
 
 # Start Comptom
-exec compton
+exec compton --config ~/.config/compton/compton.conf
 
 # Start notification handler
 exec dunst
