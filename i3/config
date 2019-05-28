@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -190,6 +190,9 @@ focus_wrapping no
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 1000ms
 
+# Keyboard Shortcuts
+bindsym $mod+n exec firefox
+
 # Change brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
@@ -200,9 +203,9 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 1%+
 bindsym XF86AudioMute exec amixer set Master toggle
 
 # Change current tracks
-#bindsym XF86AudioNext fullscreen toggle
-#bindsym XF86AudioPrev fullscreen toggle
-#bindsym XF86AudioPlay fullscreen toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioPlay exec mpc toggle
 #bindsym Print fullscreen toggle
 
 # Mouse hotkeys
